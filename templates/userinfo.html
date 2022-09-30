@@ -11,20 +11,24 @@
         <thead>
             <th>FIRST NAME</th>
             <th>LAST NAME</th>
-            <th>EMAIL</th>
-            <th>ID</th>
-            <th>ACTIONS</th>
+            <th>EMAIL </th>
+            <th>ID </th>
+            <th>UPDATED AT</th>
+            <th>CREATED AT</th>
         </thead>
         <tbody>
             {%for user in users%}
-                <tr>
-                    <td>{{user.first_name}}</td><td>{{user.last_name}}</td><td>{{user.email}}</td><td>{{user.id}}</td><td><a href = '/show/{{user.id}}'>show </a><a href = '/edit/{{user.id}}'>edit </a><a href = '/delete/{{user.id}}'>delete</a></td>
-                </tr>
+            <tr>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.update_at}}</td>
+                <td>{{user.created_at}}</td>
+            </tr>
             {%endfor%}
         </tbody>
     </table>
-    <a href = "/create">create or update a user</a>
-
     
 </body>
 </html>
